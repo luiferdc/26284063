@@ -45,12 +45,24 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     padding: 10px;
   }
+
+  .card:hover{
+    -webkit-animation-name: mouse;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+  }
+
   .card img {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+    object-fit: fill;
     margin-bottom: 10px;
+
+  }
+
+  @-webkit-keyframes mouse{
+    0% {}
+    100% {background-color: #3c78d8;}
   }
   footer {
     background-color: #3c78d8;
