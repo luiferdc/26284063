@@ -9,7 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <img src="26284063.jpg" alt="foto" class="foto">
+        <picture>
+            <source media="(max-width: 768px)" srcset="CEDULApequeña.jpeg">
+            <source media="(max-width: 1200px)" src="CEDULAgrande.jpeg">
+            <img src="CEDULAgrande.jpeg" class="foto">
+        </picture>
         <div class="info">
             <h1 id="name">Luis Fernando Rodríguez</h1>
             <p class="descripcion">Soy bachiller en ciencias, actualmente cursando 7mo-8vo semestre de Licenciatura en Computación en la Universidad Central de Venezuela.
@@ -17,28 +21,28 @@
                 y la disciplina UI/UX. Resido en Valles del Tuy. Mi hobby favorito ha sido desde siempre los videojuegos. Tambien estoy comenzando a desarrollar habitos de lectura
                 actualmente...
             </p>
-            <div class="carac">
+            <div class="perfil">
                 <p class="name">Mi color favorito es:</p>
                 <p class="valores">Morado</p>
             </div>
-            <div class="carac">
+            <div class="perfil">
                 <p class="name">Mi libro favorito es:</p>
                 <p class="valores">1984</p>
             </div>
-            <div class="carac">
+            <div class="perfil">
                 <p class="name">Estilo de musica preferida es:</p>
                 <p class="valores">Rock y Salsa</p>
             </div>
-            <div class="carac">
+            <div class="perfil">
                 <p class="name">Videojuego favoritos:</p>
                 <p class="valores">Red Dead Redemption 2</p>
             </div>
-            <div class="carac">
+            <div class="perfil">
                 <p class="name">Lenguajes aprendidos:</p>
                 <p class="valores">C++, Python, Java</p>
             </div>
             <div style="margin-top: 50px; display: flex;">
-                <p style="width: 400px;">Si necesitan comunicarse conmigo pueden escribirme a:</p>
+                <p style="width: auto; margin-right: 5px;">Si necesitan comunicarse conmigo pueden escribirme a:</p>
                 <p class="email">luiferroda@gmail.com</p>
             </div>
         </div>        
