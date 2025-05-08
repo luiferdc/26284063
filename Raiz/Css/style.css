@@ -2,78 +2,78 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f4f7fb;
-  }
-  header {
-    background-color: #3c78d8;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-  header input[type="text"] {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-  }
-  header button {
-    padding: 5px 10px;
-    margin-left: 5px;
-    background-color: white;
-    color: #3c78d8;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .greeting {
-    margin-right: auto;
-    margin-left: 20px;
-  }
-  .grid {
-    display: inline-grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    gap: 15px;
-    padding: 20px;
-  }
-  .card {
-    background-color: white;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    padding: 10px;
-  }
+}
+header {
+  background-color: #3c78d8;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+header input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+header button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: white;
+  color: #3c78d8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.greeting {
+  margin-right: auto;
+  margin-left: 20px;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  gap: 15px;
+  padding: 20px;
+}
+.card {
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 10px;
+}
 
-  .card:hover{
-    -webkit-animation-name: mouse;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
-  }
+.card:hover{
+  -webkit-animation-name: mouse;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+}
 
-  .card img {
-    width: 80px;
-    height: 80px;
-    object-fit: fill;
-    margin-bottom: 10px;
-    border-radius: 50%;
-  }
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: fill;
+  margin-bottom: 10px;
 
-  @-webkit-keyframes mouse{
-    0% {}
-    100% {background-color: #3c78d8;}
-  }
-  footer {
-    background-color: #3c78d8;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 12px;
-  }
+}
+
+@-webkit-keyframes mouse{
+  0% {}
+  100% {background-color: #3c78d8;}
+}
+footer {
+  background-color: #3c78d8;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
 
 
-  .carac{
+.perfil{
     display: flex;
     height: 20px;
 }
@@ -83,11 +83,12 @@ body {
 .container{
     display: flex;
     margin: 10px;
+    height: auto;
+    width: auto;
 }
 
 .foto{
     float: left;
-    width: 300px;
     border-top-left-radius: 100px;
 }
 
@@ -98,6 +99,7 @@ body {
     border-style: solid;
     padding: 5px;
     box-shadow: 10px 5px 5px grey;
+    font-size: 1.1vw
 }
 
 #name{
@@ -119,4 +121,8 @@ body {
 }
 .email{
     color: orange;
+}
+
+.hero{
+  background-image: url('../Imagenes/26284063grande.jpeg');
 }
