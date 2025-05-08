@@ -57,7 +57,7 @@ body {
     height: 80px;
     object-fit: fill;
     margin-bottom: 10px;
-
+    border-radius: 50%;
   }
 
   @-webkit-keyframes mouse{
