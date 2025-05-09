@@ -5,14 +5,17 @@
   <title>ATI [UCV] 2025-1</title>
   <link rel="icon" type="image/x-icon" href="..\Imagenes\favicon-16x16.png">
   <link href="..\Css\style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="config" href="../conf/configES.json"/>
 </head>
 <body>
 
   <header>
-    <h1>ATI <span style="font-weight: normal;">[UCV]</span> 2025-1</h1>
-    <div class="greeting">Hola, Luis Fernando</div>
+    <h1 id="ati"></h1>
+    <span id="ucv" style="font-size: 75%;"></span>
+    <h1 id="periodo"></h1>
+    <div id="saludo" class="greeting"></div>
     <input type="text" placeholder="Nombre...">
-    <button>Buscar</button>
+    <button id="botonBuscar"></button>
   </header>
 
   <main class="grid">
@@ -65,10 +68,8 @@
         <div>Juan Antonio Perez</div>
     </div>
   </main>
-
-  <footer>
-    Copyright © 2025 Escuela de computación - ATI. Todos los derechos reservados
-  </footer>
-
+  
+  <footer id="footer"></footer>
+  <script type="module" src="../js/index.js"></script>
 </body>
 </html>
