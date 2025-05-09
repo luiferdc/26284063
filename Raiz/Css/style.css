@@ -33,17 +33,29 @@ header button {
   margin-right: auto;
   margin-left: 20px;
 }
-.grid {
-  display: inline-grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  gap: 15px;
+
+.grid-container {
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  gap: 20px;
   padding: 20px;
+  justify-content: center;
+  margin: 0;
 }
+
 .card {
-  background-color: white;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  background-color: #ffffff;
   padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 150px;
+}
+
+ul{
+  list-style: none;
 }
 
 .card:hover{
@@ -57,7 +69,7 @@ header button {
   height: 80px;
   object-fit: fill;
   margin-bottom: 10px;
-
+  border-radius: 40px;
 }
 
 @-webkit-keyframes mouse{
