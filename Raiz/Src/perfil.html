@@ -8,40 +8,41 @@
     <link href="../Css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
+
     <div class="container">
         <picture>
-            <source media="(max-width: 768px)" srcset="../Imagenes/26284063pequeña.jpeg">
-            <source media="(max-width: 1200px)" src="../Imagenes/26284063grande.jpeg">
-            <img src="../Imagenes/26284063grande.jpeg" class="foto">
+            <img id="foto" class="foto">
         </picture>
         <div class="info">
-            <h1 id="name">Luis Fernando Rodríguez</h1>
-            <p class="descripcion"></p>
+            <h1 id="nombre"></h1>
+            <p  id="descripcion" class="descripcion"></p>
             <div class="perfil">
-                <p class="name">Mi color favorito es:</p>
-                <p class="valores"></p>
+                <p id="color" class="name"></p>
+                <p id="color_v" class="valores"></p>
             </div>
             <div class="perfil">
-                <p class="name">Mi libro favorito es:</p>
-                <p class="valores"></p>
+                <p id="libro" class="name"></p>
+                <p id="libro_v" class="valores"></p>
             </div>
             <div class="perfil">
-                <p class="name">Estilo de musica preferida es:</p>
-                <p class="valores"></p>
+                <p id="musica" class="name"></p>
+                <p id="musica_v" class="valores"></p>
             </div>
             <div class="perfil">
-                <p class="name">Videojuego favoritos:</p>
-                <p class="valores"></p>
+                <p id="videojuego" class="name"></p>
+                <p id="videojuego_v" class="valores"></p>
             </div>
             <div class="perfil">
-                <p class="name">Lenguajes aprendidos:</p>
-                <p class="valores"></p>
+                <p id="lenguajes" class="name"></p>
+                <p id="lenguajes_v" class="valores"></p>
             </div>
             <div style="margin-top: 50px; display: flex;">
-                <p style="width: auto; margin-right: 5px;">Si necesitan comunicarse conmigo pueden escribirme a:</p>
-                <p class="email"></p>
+                <p id="email" style="width: auto; margin-right: 5px;"></p>
+                <p id="email_v" class="email"></p>
             </div>
         </div>        
     </div>
+
+    <script src="../js/perfil.js"></script>
 </body>
 </html>

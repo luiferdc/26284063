@@ -1,9 +1,6 @@
-const perfil = {	
+{ "perfil" : {	
 	"nombre": "Luis Fernando Rodríguez",
-	"descripcion": "Soy bachiller en ciencias, actualmente cursando 7mo-8vo semestre de Licenciatura en Computación en la Universidad Central de Venezuela.
-                Estoy optando por la mencion de Base de Datos (hasta ahora ha sido mi area favorita de la carrera), aunque ultimamente he despertado interes por el desarrollo web
-                y la disciplina UI/UX. Resido en Valles del Tuy. Mi hobby favorito ha sido desde siempre los videojuegos. Tambien estoy comenzando a desarrollar habitos de lectura
-                actualmente...",
+	"descripcion": "Soy bachiller en ciencias, actualmente cursando 7mo-8vo semestre de Licenciatura en Computación en la Universidad Central de Venezuela. Estoy optando por la mencion de Base de Datos (hasta ahora ha sido mi area favorita de la carrera), aunque ultimamente he despertado interes por el desarrollo web y la disciplina UI/UX. Resido en Valles del Tuy. Mi hobby favorito ha sido desde siempre los videojuegos. Tambien estoy comenzando a desarrollar habitos de lectura actualmente...",
 	"color": "Morado",
 	"libro": ["1984"],
 	"musica": ["Rock","Salsa"],
@@ -13,4 +10,4 @@ const perfil = {
 	"ci": "26284063",
 	"genero": "masculino",
 	"fecha_nacimiento": "21/11/1996"
-}
+}}
