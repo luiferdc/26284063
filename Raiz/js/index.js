@@ -2,6 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const idioma = params.get('idioma');
 
 let url_idioma = "../conf/config" + idioma + ".json";
+let mensaje_busqueda_vacia = "";
 
 // cargando configuracion
 fetch(url_idioma)
@@ -19,13 +20,14 @@ fetch(url_idioma)
         document.getElementById('saludo').textContent = config.config.saludo + ", Luis Fernando...";
         document.getElementById('botonBuscar').textContent = config.config.buscar;
         document.getElementById('footer').textContent = config.config.copyRight;
-        
+        mensaje_busqueda_vacia = config.config.busqueda_vacia;
     })
     .catch(error => {
         console.error("Error al cargar la configuración: ", error);
-    })
+    });
 
 //cargando listado de estudiantes
+const lista = document.getElementById('lista-estudiantes');
 fetch("../datos/index.json")
     .then(response => {
         if(!response.ok){
@@ -35,7 +37,6 @@ fetch("../datos/index.json")
     })
 
     .then(datos => {
-        const lista = document.getElementById('lista-estudiantes');
         datos.perfiles.forEach(perfil => {
             const li = document.createElement('li');
             const foto = document.createElement('img');
@@ -49,23 +50,56 @@ fetch("../datos/index.json")
             li.appendChild(nombre);
             lista.appendChild(li);
         })
+    });
+
+const inputBusqueda = document.getElementById('busqueda');
+let estudiantes = [];
+
+fetch('../datos/index.json')
+    .then(response => response.json())
+    .then(data =>{
+        estudiantes = data.perfiles;
     })
+    .catch(error =>{
+        console.error('No se pudo cargar el json que contiene la lista de estudiantes', error);
+    });
 
+//funcion para mostrar estudiantes en la lista
+function mostrarEstudiantes(filtrados, texto){
 
-/*
-const lista = document.getElementById('lista-estudiantes');
+    if(filtrados.length === 0){
+        lista.innerHTML = '';
+        const li = document.createElement('li');
+        li.textContent = mensaje_busqueda_vacia + texto;
+        li.style = 'color: #3c78d8';
+        lista.appendChild(li);
+    }else{
+        lista.innerHTML = '';
+        filtrados.forEach(est =>{
+        const li = document.createElement('li');
+        const foto = document.createElement('img');
+        const nombre = document.createElement('p');
+        li.className = 'card';
 
-perfiles.forEach(perfil => {
-    const li = document.createElement('li');
-    const foto = document.createElement('img');
-    const nombre = document.createElement('p');
-    li.className = 'card';
+        nombre.textContent = est.nombre;
+        foto.src = "../datos/" + est.imagen
 
-    nombre.textContent = perfil.nombre
-    foto.src="../datos/"+perfil.imagen;
+        li.appendChild(foto);
+        li.appendChild(nombre);
+        lista.appendChild(li);
 
-    li.appendChild(foto);
-    li.append(nombre);
-    lista.appendChild(li);
+    }) 
+    }
+    
+}
+
+//escuchar cambios en el campo busqueda
+inputBusqueda.addEventListener('input',() =>{
+
+    const texto = inputBusqueda.value.toLowerCase();
+    const filtrados = estudiantes.filter(est =>
+        est.nombre.toLowerCase().includes(texto)
+    );
+    
+    mostrarEstudiantes(filtrados,texto);
 })
-*/

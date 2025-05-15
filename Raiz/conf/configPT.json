@@ -12,5 +12,6 @@
 	"lenguajes":"Linguagems aprendidas",
 	"email":"Se precisar me contatar pode me escrever em [email]",
 	"buscar": "Procurar",
-	"saludo": "Olá"
+	"saludo": "Olá",
+	"busqueda_vacia" : "Não existe um aluno com nome: "
 }}

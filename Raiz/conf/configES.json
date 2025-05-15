@@ -13,6 +13,7 @@
 		"lenguajes":" Lenguajes aprendidos:",
 		"email": "Si necesitan comunicarse conmigo me pueden escribir a:",
 		"buscar": "Buscar",
-		"saludo": "Hola"
+		"saludo": "Hola",
+		"busqueda_vacia" : "No hay alumnos que tengan en su nombre: "
 	}
 }
