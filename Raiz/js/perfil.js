@@ -1,5 +1,12 @@
+const params = new URLSearchParams(window.location.search);
+const perfilCi = params.get("ci");
+const idioma = params.get('idioma');
+
+let ruta_foto = "";
+let url_idioma = "../conf/config" + idioma + ".json";
+
 //Configurando el perfil.html
-fetch("../conf/configES.json")
+fetch(url_idioma)
     .then(response => response.json())
     .then(config => {
         document.getElementById('color').textContent = config.config.color;
@@ -9,15 +16,14 @@ fetch("../conf/configES.json")
         document.getElementById('lenguajes').textContent = config.config.lenguajes;
         document.getElementById('email').textContent = config.config.email;
     })
+    .catch(error => {
+        console.error('no se pudo configurar el idioma de la pagina',error);
+        document.body.innerHTML = "<h2>No se pudo configurar el idioma de la pagina, el parametro debe ser EN, ES o PT</h2>"
+    })
 
 
 
 // Cargando la informacion del perfil del estudiante    
-const params = new URLSearchParams(window.location.search);
-const perfilCi = params.get("ci");
-
-let ruta_foto = "";
-
 // cargando ruta de foto
 fetch("../datos/index.json")
     .then(response => response.json())

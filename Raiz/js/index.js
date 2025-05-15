@@ -1,6 +1,10 @@
+const params = new URLSearchParams(window.location.search);
+const idioma = params.get('idioma');
+
+let url_idioma = "../conf/config" + idioma + ".json";
 
 // cargando configuracion
-fetch("../conf/configES.json")
+fetch(url_idioma)
     .then(response => {
         if(!response.ok){
             throw new Error("No se pudo cargar la configuración");
