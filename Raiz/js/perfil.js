@@ -5,6 +5,8 @@ const idioma = params.get('idioma');
 let ruta_foto = "";
 let url_idioma = "../conf/config" + idioma + ".json";
 
+
+
 //Configurando el perfil.html
 fetch(url_idioma)
     .then(response => response.json())
@@ -15,6 +17,7 @@ fetch(url_idioma)
         document.getElementById('videojuego').textContent = config.config.video_juego;
         document.getElementById('lenguajes').textContent = config.config.lenguajes;
         document.getElementById('email').textContent = config.config.email;
+        console.log(this);
     })
     .catch(error => {
         console.error('no se pudo configurar el idioma de la pagina',error);
@@ -53,6 +56,7 @@ if(perfilCi){
             console.error("Error al cargar el perfil:",error);
             document.body.innerHTML = "<h2>Error al cargar el perfil, la cedula introducida no se encuentra en los datos</h2>"
         })
+     
 
 }else{
     document.body.innerHTML = "<h2>No se especifico ninguna cedula como parametro en el URL</h2>"
